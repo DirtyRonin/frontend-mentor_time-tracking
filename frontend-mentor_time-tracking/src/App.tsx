@@ -1,13 +1,16 @@
 import React from 'react';
+import { TimeTracker } from './components/time-tracker';
 
 function App() {
   return (
-    <div>
+    <>
       <header></header>
       <nav></nav>
-      <main></main>
+      <main className=" bg-very-dark-blue grid w-full h-full ">
+        <TimeTracker />
+      </main>
       <footer></footer>
-    </div>
+    </>
   );
 }
 
