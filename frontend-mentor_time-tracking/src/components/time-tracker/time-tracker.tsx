@@ -20,9 +20,9 @@ export function TimeTracker() {
 
   return (
     <div>
-      <div className="flex flex-col w-full px-[24px] py-[80px] gap-4 bg-very-dark-blue">
+      <div className="flex flex-col w-full px-[24px] py-[80px] gap-5 bg-very-dark-blue">
         <UserTracker name={state.user.name} imgUrl="" timeframe={state.timeframe} setTimeframe={setTimeframe} />
-        <div className="flex flex-row flex-wrap gap-4">
+        <div className="flex flex-row flex-wrap gap-5">
           {state.activities.map((x, index) => (
             <ActivityItem key={index} activity={x} timeframeType={state.timeframe} />
           ))}
