@@ -1,4 +1,5 @@
 import React from 'react';
+import { GetReportsByTimeframe } from '../../api/report-api';
 import { TimeframeType } from '../../models/timeframe-type';
 import { UserReport } from '../../models/user-report';
 import { ActivityItem } from './activity-item';
@@ -7,16 +8,13 @@ import { UserTracker } from './user-tracker';
 export function TimeTracker() {
   const [state, dispatch] = React.useState<UserReport>({
     user: { name: 'Jeremy Robson' },
-    activities: [
-      { title: 'work', timeframe: { current: 13, previous: 10 } },
-      { title: 'play', timeframe: { current: 13, previous: 10 } },
-      { title: 'study', timeframe: { current: 13, previous: 10 } },
-      { title: 'exercise', timeframe: { current: 13, previous: 10 } },
-      { title: 'social', timeframe: { current: 13, previous: 10 } },
-      { title: 'self care', timeframe: { current: 13, previous: 10 } },
-    ],
+    activities: [],
     timeframe: 'weekly',
   });
+
+  React.useEffect(() => {
+    GetReportsByTimeframe(state.timeframe).then((result) => dispatch((prev) => ({ ...prev, activities: result })));
+  }, [state.timeframe]);
 
   const setTimeframe = (timeframe: TimeframeType) => dispatch((prev) => ({ ...prev, timeframe }));
 
