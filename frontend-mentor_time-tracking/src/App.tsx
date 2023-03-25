@@ -6,7 +6,7 @@ function App() {
     <>
       <header></header>
       <nav></nav>
-      <main className=" bg-very-dark-blue w-full h-full ">
+      <main className="flex justify-center items-center bg-very-dark-blue w-full h-full ">
         <TimeTracker />
       </main>
       <footer></footer>
