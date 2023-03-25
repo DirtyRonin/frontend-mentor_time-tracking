@@ -1,9 +1,6 @@
 import { Activity } from '../../models/activity';
-import { ActivityTheme } from '../../models/activity-theme';
-import { Timeframe } from '../../models/timeframe';
 import { GetActivityTheme } from '../../utils/get-activity-theme';
-import IconEllipsis from '../../project/images/icon-ellipsis.svg';
-import { getPublicUrl } from '../../utils/get-public-url';
+import { ReactComponent as IconEllipsis } from '../../project/images/icon-ellipsis.svg';
 import { TimeframeType } from '../../models/timeframe-type';
 import { GetTimeframeConfig } from '../../utils/get-timeframe-config';
 
@@ -20,11 +17,11 @@ export function ActivityItem({ activity: { title, timeframe }, timeframeType }: 
       className={`relative w-full h-36 bg-no-repeat bg-[top_-0.3rem_right_1rem] ${theme?.color} rounded-2xl  `}
       style={{ backgroundImage: `url("${theme?.icon}")` }}
     >
-      <div className="absolute flex flex-col gap-0.5 top-9 bg-dark-blue w-full rounded-2xl p-[26px] ">
+      <div className="absolute flex flex-col gap-0.5 top-9 bg-dark-blue hover:bg-[hsl(235_46%_30%)] cursor-pointer w-full rounded-2xl p-[26px] ">
         <div className="flex justify-between items-center">
           <p className="text-white capitalize ">{title}</p>
-          <button>
-            <img alt="" src={IconEllipsis} />
+          <button className=" text-pale-Blue opacity-60 active:text-white active:opacity-100">
+            <IconEllipsis />
           </button>
         </div>
         <div className="flex justify-between items-center">
