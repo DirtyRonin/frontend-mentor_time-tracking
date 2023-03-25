@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/frontend-mentor_time-tracking/static/css/main.dae51d0b.css",
+    "main.js": "/frontend-mentor_time-tracking/static/js/main.f0991cc6.js",
+    "static/js/787.729378b2.chunk.js": "/frontend-mentor_time-tracking/static/js/787.729378b2.chunk.js",
+    "static/media/image-jeremy.png": "/frontend-mentor_time-tracking/static/media/image-jeremy.71cd41f11bee24c1ded3.png",
+    "index.html": "/frontend-mentor_time-tracking/index.html",
+    "static/media/icon-ellipsis.svg": "/frontend-mentor_time-tracking/static/media/icon-ellipsis.068777b0c3b25d09afdcf216ece5c96b.svg",
+    "main.dae51d0b.css.map": "/frontend-mentor_time-tracking/static/css/main.dae51d0b.css.map",
+    "main.f0991cc6.js.map": "/frontend-mentor_time-tracking/static/js/main.f0991cc6.js.map",
+    "787.729378b2.chunk.js.map": "/frontend-mentor_time-tracking/static/js/787.729378b2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dae51d0b.css",
+    "static/js/main.f0991cc6.js"
+  ]
+}
