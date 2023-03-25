@@ -1,11 +1,14 @@
+import { timeframes, TimeframeType } from '../../models/timeframe-type';
 import Avatar from '../../project/images/image-jeremy.png';
 
 interface UserTrackerProps {
   name: string;
   imgUrl: string;
+  timeframe: TimeframeType;
+  setTimeframe?: (timeframe: TimeframeType) => void;
 }
 
-export function UserTracker({ name }: UserTrackerProps) {
+export function UserTracker({ name, timeframe, setTimeframe }: UserTrackerProps) {
   return (
     <div className="flex flex-col bg-dark-blue rounded-2xl ">
       <div className="grid grid-cols-[2fr,5fr] items-center justify-center bg-blue px-7 py-6 gap-3 rounded-2xl">
@@ -15,10 +18,16 @@ export function UserTracker({ name }: UserTrackerProps) {
           <p className="text-white opacity-80 font-light text-xl">{name}</p>
         </div>
       </div>
-      <div className="grid text-pale-Blue opacity-60 grid-cols-3 py-6">
-        <button>Daily</button>
-        <button>Weekly</button>
-        <button>Monthly</button>
+      <div className="grid  grid-cols-3 py-6">
+        {timeframes.map((x) => (
+          <button
+            onClick={() => setTimeframe?.(x)}
+            key={`timeframe-button-key-${x}`}
+            className={`capitalize font-normal ${x === timeframe ? 'text-white' : 'text-pale-Blue'} active:text-white`}
+          >
+            {x}
+          </button>
+        ))}
       </div>
     </div>
   );
